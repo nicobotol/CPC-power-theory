@@ -44,7 +44,7 @@
   \section{Introduction}
   \begin{frame}{Evolution and philosophy}{\insertsection}
         CPC power theory started to be developed in \textcolor{NTNU_orange}{1984} by Leszek S. Czarnecki.\\
-        Most cited article according to Scholar is \textit{"What is wrong with the Budeanu concept of reactive and distortion power and why it should be abandoned"} \cite{6312797}.
+        The most cited article according to Scholar is \textit{"What is wrong with the Budeanu concept of reactive and distortion power and why it should be abandoned"} \cite{6312797}.
         \begin{itemize}
             \item Currents are not related with physical phenomenon in the circuit
             \item Currents are useless for compensator's design
@@ -71,7 +71,7 @@
       \end{tikzpicture}
     \end{figure}
 
-      Not all the the power theories are correct from the physical point of view, even tough they are mathematically correct.\\
+      Not all the power theories are correct from the physical point of view, even tough they are mathematically correct.\\
 
       \textbf{Physical} does not mean that the current exists physically, but they are associated with some physical phenomenon in the load. 
       
@@ -148,7 +148,7 @@ The current is
             ||i_s||=\sqrt{\sum_{n \in N_0}(G_n-G_e)^2U_n^2}\\
             ||i_r||=\sqrt{\sum_{n\in N}B_n^2U_n^2}=\sqrt{\sum_{n\in N}\left(\frac{Q_n}{U_n}\right)^2}
       \end{gather}
-      For compute the RMS of the load current having RMSs of the component, their orthogonality is required, and following prove.
+      For compute the RMS of the load current having RMSs of the component, their orthogonality is required, and following proven.
   \end{frame}
 
   \begin{frame}{Orthogonality of the currents}{\insertsection}
@@ -160,11 +160,11 @@ The current is
       = G_e\left( \sum_{n\in N}G_nU_n^2-G_e\sum_{n\in N}U_n^2\right) = G_e\left(P-G_e||u||^2\right)=0\\
       (i_r, i_s) = Re\left\{\sum_{n\in N}jB_eU_n(G_n-G_e)U_n^*\right\}=0
     \end{gather}
-    Orthogonality is proved
+    Orthogonality is proven
   \end{frame}
       
   \begin{frame}{Orthogonality of the currents-cont.}{\insertsection}
-    So the current can be expressed as:
+    So the currents can be expressed as:
     \begin{equation}
       ||i||^2 = ||i_a||^2 + ||i_r||^2 + ||i_s||^2
     \end{equation}
@@ -277,6 +277,7 @@ The current is
       \node[draw, dashed, fit={(4,0) (6,2.5)}, inner sep=10pt, label=above:HGL] {};
     \end{circuitikz}
     \end{figure}
+    
 \end{frame}
 
 \begin{frame}{Introduction example-cont.}{\insertsection}
@@ -301,8 +302,8 @@ The current is
       P_n = U_nI_n cos(\varphi_n)
     \end{equation}
     \begin{itemize}
-      \item $|\varphi_n|<\pi/2 \Rightarrow$ energy flow from \textcolor{NTNU_purple}{supply source} towards the \textcolor{NTNU_green}{load}
-      \item $|\varphi_n| >\pi/2 \Rightarrow$ energy flow  from \textcolor{NTNU_green}{load} towards the \textcolor{NTNU_purple}{supply source}
+      \item $|\varphi_n|<\pi/2 \Rightarrow$ energy flow from \textcolor{NTNU_blue}{supply source} towards the \textcolor{NTNU_green}{load}
+      \item $|\varphi_n| >\pi/2 \Rightarrow$ energy flow  from \textcolor{NTNU_green}{load} towards the \textcolor{NTNU_blue}{supply source}
     \end{itemize}
 \end{frame}
 
@@ -399,9 +400,9 @@ The current is
   \begin{frame}{Non-univocal definition of S}{\insertsection}
     Confusion in the definition of the Apparent Power since three definitions coexist:
     \begin{gather}
-    S_A = U_RI_R+U_SI_S+U_TI_T\\
-    S_G = \sqrt{P^2+Q^2}\\
-    S_B = \sqrt{U_R^2+U_S^2+U_T^2}\sqrt{I_R^2+I_S^2+I_T^2}  
+    \text{Arithmetic: } S_A = U_RI_R+U_SI_S+U_TI_T\\
+    \text{Geometric: } S_G = \sqrt{P^2+Q^2}\\
+    \text{Budeanu's: }S_B = \sqrt{U_R^2+U_S^2+U_T^2}\sqrt{I_R^2+I_S^2+I_T^2}  
     \end{gather}
     These are the same only if line currents are sinusoidal and symmetrical. The power factor behaves consequently. 
   \end{frame}
@@ -426,7 +427,7 @@ The current is
       \textbf{\textit{i}} = [i_R, i_S, i_T]^{T} = \sqrt{2}Re[I_R, I_S, I_T]^{T}e^{j\omega t} = \sqrt{2}Re\{\textbf{\textit{I}}e^{j\omega t}\}
     \end{equation}
      The \textcolor{NTNU_orange}{equivalent admittance}: $Y_e = Y_{RS}+Y_{ST}+Y_{TR} = G_e+jB_e$\\
-    \textcolor{NTNU_green}{NOTE: bolt text identifies vectors}
+    \textcolor{NTNU_green}{NOTE: \textbf{bold} text identifies vectors}
 \end{frame}
 
 \begin{frame}{Line current and unbalance admittance}{\insertsection}
@@ -455,11 +456,11 @@ The current is
     \end{equation}
     The smallest current needed for energy permanent conversion in the load with power P is the \textcolor{NTNU_orange}{Active current}
     \begin{equation}
-        \textbf{i}_a = \sqrt{2} Re\left\{\left[G_e U_R, G_e U_S, G_e U_T\right]^Te^{j\omega_1t}\right\} = \sqrt{2} Re\left\{G_e \mathbf{U} e^{j\omega_1t} \right\} = G_e \textbf{u}
+        \textbf{i}_a = \sqrt{2} Re\left\{\left[G_e U_R \ G_e U_S \ G_e U_T\right]^Te^{j\omega_1t}\right\} = \sqrt{2} Re\left\{G_e \mathbf{U} e^{j\omega_1t} \right\} = G_e \textbf{u}
     \end{equation}
     The remaining part is 
     \begin{equation}
-        \textbf{i} - \textbf{i}_a = \sqrt{2} Re\left\{\left[I_R - G_e U_R, I_S -G_e U_S, I_T - G_e U_T\right]^Te^{j\omega_1t}\right\}
+        \textbf{i} - \textbf{i}_a = \sqrt{2} Re\left\{\left[I_R - G_e U_R \ I_S -G_e U_S \ I_T - G_e U_T\right]^Te^{j\omega_1t}\right\}
         \label{eq:i_minus_ia}
     \end{equation}
     
@@ -475,7 +476,7 @@ The current is
         Y_e U_T + \textbf{A} U_S - G_e U_T
         \end{bmatrix}
 e^{j\omega_1t}\right\} = \notag \\
-\sqrt{2} Re\left\{
+= \sqrt{2} Re\left\{
         \begin{bmatrix}
         j B_e U_R + \textbf{A} U_R \\
         j B_e U_S + \textbf{A} U_T \\
@@ -524,6 +525,38 @@ e^{j\omega_1t}\right\} = \sqrt{2} Re\left\{\left(jB_e\textbf{U} + A\textbf{\text
     \item Reactive power: $Q = \pm||\pmb{\mathit{i}_{r}}|| ||\pmb{\mathit{u}}||= -B_e ||\pmb{\mathit{u}}||^2$
   \end{itemize}
   \end{frame}
+
+    \begin{frame}{Compensation of reactive and unbalance current}{\insertsection}
+    A shunt \textit{balancing compensator} can be used for reducing the unbalance and reactive currents. The total compensation happens when:
+    \begin{equation}
+        \pmb{\mathit{i}_{c}} = -\pmb{\mathit{i}_{r}}-\pmb{\mathit{i}_{u}}
+    \end{equation}
+    Considering ideal, lossless devices
+    \begin{figure}
+        \centering
+        \includegraphics[width=0.3\columnwidth]{3P_compensator.png}
+    \end{figure}
+
+    \begin{gather}
+        \pmb{\mathit{i'}_{r}}=\sqrt{2}Re\left\{j\left[B_e + (T_{ST} + T_{TR} + T_{RS})\right] \pmb{\mathit{U}}e^{j\omega_1 t} \right\} \\
+        \pmb{\mathit{i'}_{u}}=\sqrt{2}Re\left\{\left[A - j(T_{ST} + \alpha T_{TR} + \alpha^*T_{RS})\right] \pmb{\mathit{U^{\#}}}e^{j\omega_1 t} \right\} 
+    \end{gather}
+
+    \end{frame}
+    \begin{frame}{Compensation of reactive and unbalance current-cont.}{\insertsection}
+    Compensation conditions:
+    \begin{gather}
+        B_e + (T_{ST} + T_{TR} + T_{RS}) = 0\\
+        A - j(T_{ST} + \alpha T_{TR} + \alpha^*T_{RS}) = 0\\
+    \end{gather}
+    The last equation can be decomposed in:
+    \begin{gather}
+        Re\left\{A - j(T_{ST} + \alpha T_{TR} + \alpha^*T_{RS})\right\}=0\\
+        Im\left\{A - j(T_{ST} + \alpha T_{TR} + \alpha^*T_{RS})\right\}=0
+    \end{gather}
+    
+    \end{frame}
+
 
 \section{3 phase systems with non sinusoidal voltages and LTI loads}
 
